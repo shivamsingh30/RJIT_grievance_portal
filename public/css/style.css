@@ -2,7 +2,7 @@
     padding: 30px;
 }
 .number{
-    font-size: 33px;
+    font-size: 20px;
     font-weight: 500;
 }
 .non{
@@ -12,19 +12,19 @@
     color: #213e94;
     text-decoration: none;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 28px;
 }
 .itm{
     color: #832608;
 }
 .icon{
-    font-size: 33px;
+    font-size: 38px;
     border-radius: 55px;
     margin: 3px;
     color: #213e94;
 }
 .navbar{
-    background-color: #01040e !important;
+    background-color: black !important;
 }
 .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 15px;

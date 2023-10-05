@@ -1,5 +1,5 @@
 <%-include('../layouts/header.ejs')%>
-<%-include('../layouts/sidebar.ejs')%>
+  <%-include('../layouts/sidebar.ejs')%>
 
 
 
@@ -22,56 +22,64 @@
           <div class="card-body">
             <% if(msg.length> 0){ %>
               <div class="alert alert-success">
-                      <%= msg %>
+                <%= msg %>
               </div>
               <% } %>
-              <% if(msg1.length> 0){ %>
-                <div class="alert alert-danger">
-                        <%= msg1 %>
-                </div>
-                <% } %>
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                  <th>ID</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Course</th>
-                  <th>Image</th>
-                  <th>Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <% i=1 %>
-                <% d.forEach((item)=>{ %>
-                  <tr>
-                    <td><%= i++ %></td>
-                    <td><%= item.name %></td>  
-                    <td><%= item.email %></td>
-                    <td><%= item.course %></td>
-                    <td>
-                      <img src="<%= item.image.url %>" alt="" style="width: 50px; border-radius: 2px;" >
-                    </td>
-                    <td>
-                      <a href="/admin/studentview/<%= item._id %>" class="btn btn-info">View</a>
-                      <a href="/admin/studentedit/<%= item._id %>" class="btn btn-success">Edit</a>
-                      <a href="/admin/studentdelete/<%= item._id %>" class="btn btn-danger">Delete</a>
-                    </td>
-                  </tr>
-                  <% }) %>
+                <% if(msg1.length> 0){ %>
+                  <div class="alert alert-danger">
+                    <%= msg1 %>
+                  </div>
+                  <% } %>
+                    <table id="example1" class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Course</th>
+                          <th>Image</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% i=1 %>
+                          <% d.forEach((item)=>{ %>
+                            <tr>
+                              <td>
+                                <%= i++ %>
+                              </td>
+                              <td>
+                                <%= item.name %>
+                              </td>
+                              <td>
+                                <%= item.email %>
+                              </td>
+                              <td>
+                                <%= item.course %>
+                              </td>
+                              <td>
+                                <img src="<%= item.image.url %>" alt="" style="width: 50px; border-radius: 2px;">
+                              </td>
+                              <td>
+                                <a href="/admin/studentview/<%= item._id %>" class="btn btn-info">View</a>
+                                <a href="/admin/studentedit/<%= item._id %>" class="btn btn-success">Edit</a>
+                                <a href="/admin/studentdelete/<%= item._id %>" class="btn btn-danger">Delete</a>
+                              </td>
+                            </tr>
+                            <% }) %>
 
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>Id</th>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Course</th>
-                  <th>Image</th>
-                  <th>Action</th>
-                </tr>
-              </tfoot>
-            </table>
+                      </tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Id</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Course</th>
+                          <th>Image</th>
+                          <th>Action</th>
+                        </tr>
+                      </tfoot>
+                    </table>
           </div>
           <!-- /.card-body -->
         </div>
@@ -102,14 +110,24 @@
                     <input type="password" name="password" class="form-control" required>
                   </div>
                   <div class="form-group">
-                    <label for="" >Course</label>
+                    <label for="">Course</label>
                     <select name="course" id="" class="form-control">
                       <option value="">Select Course</option>
+                      <option value="">B.E (A.E)</option>
+                      <option value="">B.E (M.E)</option>
+                      <option value="">B.E (E.E)</option>
+                      <option value="">B.E (E.C.E)</option>
+                      <option value="">B.E (C.S.E)</option>
+                      <option value="">B.E (I.T)</option>
+                      <option value="">MCA</option>
+                      <option value="">M.Tech</option>
                       <% c.forEach((item)=>{ %>
-                        <option value="<%= item.cname %>"><%= item.cname %></option>
-                 <%  }) %>
+                        <option value="<%= item.cname %>">
+                          <%= item.cname %>
+                        </option>
+                        <% }) %>
 
-                  
+
                     </select>
                   </div>
 
