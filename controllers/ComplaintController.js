@@ -182,12 +182,12 @@ class ComplaintController {
     //         port: 587,
 
     //         auth: {
-    //             user: "shivambhd30@gmail.com",
-    //             pass: "RMX3085",
+    //             user: "iamshivambhd30@gmail.com",
+    //             pass: "",
     //         },
     //     });
     //     let info = await transporter.sendMail({
-    //         from:"test@gmail.com", //sender address
+    //         from:"iamshivambhd30@gmail.com", //sender address
     //         to: email, //list of receivers
     //         subject: `Complaint send Succesfully`, //Subject line
     //         text: "hello", //plain text body

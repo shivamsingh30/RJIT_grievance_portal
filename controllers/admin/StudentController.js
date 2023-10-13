@@ -143,9 +143,9 @@ class StudentController {
                 const user = await StudentModel.findOne({ email: email })
                 // console.log(student);
                 if (user != null) {
-                   //const ismatched = await bcrypt.compare(password, user.password)
-                     const ismatched = true
-                     console.log(ismatched);
+                   const ismatched = await bcrypt.compare(password, user.password)
+                     //const ismatched = true
+                     //console.log(ismatched);
                     if (ismatched) {
                         if (user.role == 'admin') {
                             //generate token for security
